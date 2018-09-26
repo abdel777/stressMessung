@@ -1,12 +1,13 @@
 # Stress Messung Application
 ## Introduction
-Identifikation von psychophysiologische Stressreaktionen bei der Nutzung von Smartphones und Wearbles unter Berücksichtigung von individuaellen und kontextvariablen. Ableitung von Inplikationen für das Design Systemen zun Förderung einer positiven, stressfreien und gesunden Mensche-Technik-Interaktion.
+Erstellung einer mobile Applikation durch ein Projekt Gruppe mit einer
+RESTFULL API. Der Stress der Studenten innerhalb der Universität wird
+automatisch gemessen, hier wird ein Polar H7 benutzt um das Heart Rate
+Variability zu messen. Außerdem wird viele Daten gesammelt wie die
+Position von Student, Kalander Event, das Lärmlevel etc.
 
 ### Getting Started:
 
-&nbsp;The project is started with the regular ionic commands. &nbsp; Clone the repo: &nbsp;
-```
-git clone https://gitlab.hs-ruhrwest.de/spabfrin/my-awasome-project.git
 ```
 &nbsp; Run `npm install` to install all dependencies :&nbsp;
 
