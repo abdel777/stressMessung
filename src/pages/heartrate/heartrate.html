@@ -1,0 +1,47 @@
+
+<ion-header no-border>
+
+  <ion-navbar>
+    <ion-title>heartrate</ion-title>
+       <img src="assets/imgs/hrw.png" class="hrwicon">
+  </ion-navbar>
+    <div>
+      <img src="assets/imgs/health.jpg" >
+    </div>
+</ion-header>
+
+
+
+<ion-content >
+
+
+<ion-item>
+<h2 (click)="openInfo()"> Info </h2>
+</ion-item>
+
+			<!--lottie-animation-view
+                    [options]="lottieConfig"
+                    [width]="450"
+                    [height]="250"
+                    (animCreated)="handleAnimation($event)">
+              </lottie-animation-view-->
+
+
+
+<ion-card>
+      <ion-card-header>
+        Heart Rate Per 10 seconds
+      </ion-card-header>
+      <ion-card-content>
+        <div id="div_g" style="display: block;width: 100%;height: 200px;"></div>
+        <h1 id='heartValue'>{{hr}} bps</h1>
+      </ion-card-content>
+    </ion-card>
+
+
+<ion-item>
+
+</ion-item>
+
+
+</ion-content>

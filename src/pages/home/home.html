@@ -1,0 +1,114 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <button ion-button icon-only menuToggle>
+            <ion-icon name="menu" color="weiss"></ion-icon>
+        </button>
+        <ion-buttons end>
+            <button ion-button clear (click)="logout()">
+                <ion-icon name="ios-log-out" color="weiss"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content class="backgroundhome">
+    <ion-card class="home-card">
+        <ion-segment [(ngModel)]="charts">
+            <ion-segment-button value="Tag">
+                Tag
+            </ion-segment-button>
+            <ion-segment-button value="Woche">
+                Woche
+            </ion-segment-button>
+            <ion-segment-button value="Monat">
+                Monat
+            </ion-segment-button>
+        </ion-segment>
+
+
+        <div [ngSwitch]="charts">
+            <ion-list *ngSwitchCase="'Tag'">
+                <div class="chart-pos">
+                    <div style="display: block">
+                        <canvas baseChart
+                                [datasets]="barChartData"
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [colors]="barChartColors"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType"
+                                [colors]="barChartColors"
+                                (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)">
+                        </canvas>
+                    </div>
+                </div>
+                <ion-label>Stress Messung durch den Tag</ion-label>
+            </ion-list>
+        </div>
+
+        <div [ngSwitch]="charts">
+            <ion-list *ngSwitchCase="'Woche'">
+                <div class="chart-pos">
+                    <div style="display: block">
+                        <canvas baseChart
+                                [datasets]="barChartData"
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [colors]="barChartColors"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType"
+                                (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)">
+                        </canvas>
+                    </div>
+                </div>
+                <ion-label> Stress Messung die Woche</ion-label>
+            </ion-list>
+        </div>
+
+        <div [ngSwitch]="charts">
+            <ion-list *ngSwitchCase="'Monat'">
+                <div class="chart-pos">
+                    <div style="display: block">
+                        <canvas baseChart
+                                [datasets]="barChartData"
+                                [labels]="barChartLabels"
+                                [options]="barChartOptions"
+                                [colors]="barChartColors"
+                                [legend]="barChartLegend"
+                                [chartType]="barChartType"
+                                (chartHover)="chartHovered($event)"
+                                (chartClick)="chartClicked($event)">
+                        </canvas>
+                    </div>
+                </div>
+                <ion-label>Stress Messung für ganze Monat</ion-label>
+            </ion-list>
+        </div>
+
+    </ion-card>
+    <ion-card class="home-card" (click)="openheartrate()">
+        <ion-card-header style="background-color: #f33c30; float:left" >
+            <ion-icon  name="ios-pulse-outline">
+            </ion-icon>
+        </ion-card-header>
+        <ion-card-content style="float:right" >
+            <ion-item text-wrap>
+                <span>Mesure your Herz frequenz</span>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+    <ion-card class="home-card" (click)="openTipps()">
+        <ion-card-header style="background-color: #1AE05C; float:right" >
+            <ion-icon  name="ios-contacts-outline">
+            </ion-icon>
+        </ion-card-header>
+        <ion-card-content style="float:left">
+            <ion-item text-wrap>
+                <span>Tipps zur Stressbewältigung</span>
+            </ion-item>
+        </ion-card-content>
+    </ion-card>
+</ion-content>

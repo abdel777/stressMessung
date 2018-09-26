@@ -1,0 +1,56 @@
+<ion-header>
+ <ion-toolbar>
+   <button ion-button clear large (click)="goBack()">
+     <ion-icon name="md-arrow-back"></ion-icon>
+             <img src="assets/imgs/hrw.png" class="hrwicon">
+
+   </button>
+    <ion-title>Einstellung</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content class="background">
+
+ <ion-card>
+  <ion-row>
+    <ion-col col-6>
+    <h1> HF-Sensor</h1>
+   </ion-col>
+  <ion-col>
+    <button ion-button icon-start (click)="searchBlue()" [disabled]="disableH7button">
+     <ion-icon name="md-bluetooth"></ion-icon>
+     H7 search
+   </button>
+
+  </ion-col>
+ </ion-row>
+</ion-card>
+
+
+<ion-card>
+  <ion-row>
+
+    <ion-col>
+
+
+    </ion-col>
+  </ion-row>
+</ion-card>
+<ion-card>
+  <ion-row>
+     <ion-col col-6>
+    <h1> API</h1>
+       </ion-col>
+       <ion-col>
+    <button ion-button icon-start (click)="gotohomepage()"  >
+     Api  connect
+   </button>
+
+
+    </ion-col>
+ </ion-row>
+</ion-card>
+
+</ion-content>

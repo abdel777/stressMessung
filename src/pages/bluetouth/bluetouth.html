@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>heartrate</ion-title>
+    <img src="assets/imgs/hrw.png" class="hrwicon">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+
+  <button ion-button full (click)="scan()">Scan</button>
+
+
+
+  <ion-list>
+    <button ion-item *ngFor="let device of heartRate.devices" (click)=" connect(device.id)">
+      <h2>{{ device.name || 'Unnamed' }}</h2>
+      <p>{{ device.id }}</p>
+
+     <button ion-button small item-right>Verbindung</button>
+
+    </button>
+
+  </ion-list>
+
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <p>{{ heartRate.statusMessage }}</p>
+  </ion-toolbar>
+</ion-footer>

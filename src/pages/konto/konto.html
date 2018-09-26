@@ -1,0 +1,69 @@
+<ion-header>
+ <ion-toolbar>
+   <button ion-button clear large (click)="goBack()">
+     <ion-icon name="md-arrow-back"></ion-icon>
+             <img src="assets/imgs/hrw.png" class="hrwicon"> 
+
+   </button>
+    <ion-title>
+       Mein Konto
+   </ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content padding>
+
+  <h3> Mein Konto </h3>
+
+<ion-card>
+<ion-list radio-group [(ngModel)]="sex">
+<ion-row>
+<ion-label>Geschlecht:</ion-label>
+</ion-row>
+<ion-row>
+<ion-col col-6>
+    <ion-label>Männlich <ion-radio value="m" checked></ion-radio></ion-label>
+   </ion-col>
+	 <ion-col>
+    <ion-label>Weiblich <ion-radio value="w"></ion-radio></ion-label>
+ </ion-col>
+ </ion-row>
+</ion-list>
+
+<ion-row>
+  <ion-col>
+      <ion-label>Alt</ion-label>
+      </ion-col>
+      <ion-col>
+       <ion-input placeholder="bz. 30" clearInput></ion-input>
+   </ion-col>
+</ion-row>
+
+
+<ion-row>
+  <ion-col>
+      <ion-label>Festlegen der Größe:</ion-label>
+      </ion-col>
+      <ion-col>
+       <ion-input placeholder="in cm " clearInput></ion-input>
+   </ion-col>
+</ion-row>
+
+<ion-row>
+  <ion-col>
+      <ion-label>Festlegen des Gewichts:</ion-label>
+      </ion-col>
+      <ion-col>
+       <ion-input placeholder="in kg" clearInput></ion-input>
+   </ion-col>
+</ion-row>
+</ion-card>
+
+ <button ion-button class="submit-btn" full type="submit">Save</button>
+  <button ion-button class="submit-btn" full type="submit">Modify</button>
+
+
+
+</ion-content>

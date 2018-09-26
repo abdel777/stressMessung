@@ -1,0 +1,72 @@
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Sign up</ion-title>
+        <ion-buttons end>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+    <form [formGroup]="form" (ngSubmit)="doSignup()">
+        <ion-item>
+            <ion-label floating>
+                <ion-icon name="person"></ion-icon>
+                Username
+            </ion-label>
+            <ion-input [(ngModel)]="regData.username" clear Input type="text"  clearInput formControlName="username"></ion-input>
+        </ion-item>
+
+        <ion-item class='form-text error alert alert-danger'
+                  *ngIf="form.controls.username.touched && !form.controls.username.valid">
+            <ion-label color="danger" no-margin stacked>Username Used or Empty</ion-label>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label floating>
+                <ion-icon name="md-mail"></ion-icon>
+                E-mail
+            </ion-label>
+            <ion-input  email [(ngModel)]="regData.email" clear Input type="text" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                <ion-icon name="md-lock"></ion-icon>
+                Password
+            </ion-label>
+            <ion-input [(ngModel)]="regData.password" clear Input [type]="type"
+                       formControlName="password" clearOnEdit ></ion-input>
+            <button *ngIf="!showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+                <ion-icon name="ios-eye-off"></ion-icon>
+            </button>
+            <button *ngIf="showPass" ion-button clear color="dark" type="button" item-right (click)="showPassword()">
+                <ion-icon name="ios-eye"></ion-icon>
+            </button>
+        </ion-item>
+
+        <ion-item class='form-text error' *ngIf="form.controls.password.touched && !form.controls.password.valid">
+            <ion-label no-margin stacked wrap-text>Password must be between 6 and 12 characters.</ion-label>
+        </ion-item>
+
+        <ion-item>
+            <ion-label floating>
+                <ion-icon name="md-lock"></ion-icon>
+                Confirm Password
+            </ion-label>
+            <ion-input [(ngModel)]="regData.passwordConf" clear Input type="Password"
+                       formControlName="passwordConf"></ion-input>
+        </ion-item>
+        <ion-item class='form-text error'
+                  *ngIf="form.controls.passwordConf.touched && form.hasError('mismatchedPasswords')">
+            <ion-label no-margin stacked>Passwords do not match</ion-label>
+        </ion-item>
+
+
+        <button ion-button color="primary"
+                text-center type="submit" block [disabled]="!form.valid">Registrieren
+        </button>
+    </form>
+
+</ion-content>

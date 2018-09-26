@@ -1,0 +1,28 @@
+<ion-content class="background" >
+
+<img id="loginlogo" src="assets/imgs/logo.png"/>
+<ion-card>
+  <ion-card-header>
+    LOGIN
+   </ion-card-header>
+   <ion-card-content padding>
+       <form [formGroup]="formlogin" (ngSubmit)="doLogin()">
+           <ion-item>
+               <ion-label floating>Username</ion-label>
+               <ion-input [(ngModel)]="loginData.username" name="username" type="text" formControlName="username" ></ion-input>
+           </ion-item>
+           <ion-item>
+               <ion-label floating>Password</ion-label>
+               <ion-input [(ngModel)]="loginData.password" name="password" type="password"formControlName="password" ></ion-input>
+           </ion-item>
+           <button ion-button block [disabled]="!formlogin.valid" type="submit" >
+               Login
+           </button>
+       </form>
+       <button ion-button block clear (click)="register()">
+           don't have an account? Register Now
+       </button>
+    </ion-card-content>
+   </ion-card>
+
+  </ion-content>

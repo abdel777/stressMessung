@@ -1,0 +1,67 @@
+<!--
+  Generated template for the SlidersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="primary">
+        <ion-title>Privacy</ion-title>
+        <ion-buttons end>
+            <button ion-button clear (click)="logout()">
+                <ion-icon name="ios-log-out" color="weiss"></ion-icon>
+            </button>
+        </ion-buttons>
+    </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="tutorial-page">
+
+    <ion-slides pager>
+        <ion-slide >
+            <ion-toolbar>
+                <ion-buttons end>
+                    <button ion-button color="primary" (click)="skip()">Skip</button>
+                </ion-buttons>
+            </ion-toolbar>
+            <img src="assets/imgs/logo.png" class="slide-image"/>
+            <h2 class="slide-title">About StressMessung</h2>
+            <p>Identifikation von psychophysiologische
+            Stressreaktionen bei der Nutzung von Smartphones und Wearbles unter Berücksichtigung von
+        individuaellen und kontextvariablen.</p>
+        <p>Ableitung von Inplikationen für das Design Systemen zun Förderung einer positiven, stressfreien und gesunden Mensche-Technik-Interaktion.</p>
+        </ion-slide>
+        <ion-slide >
+            <ion-toolbar>
+                <ion-buttons end>
+                    <button ion-button color="primary" (click)="skip()">Skip</button>
+                </ion-buttons>
+            </ion-toolbar>
+            <img src="assets/imgs/logo.png" class="slide-image"/>
+            <h2 class="slide-title">The Privacy Notice for new users</h2>
+                <p>To provide <b>StressMessung functions in Hochschule Ruhr West</b> the app may collect data about the following :</p>
+                <p><ion-icon name='ios-person-add' color='light'></ion-icon>  Profile</p>
+                <p><ion-icon name='ios-phone-portrait' color='light'></ion-icon>  Sensors and usage</p>
+                 <p><ion-icon name='ios-pin' color='light'></ion-icon>  Location in Univesity</p>
+            <button ion-button color="primary" outline (click)="topersolandata()">Personal data</button>
+        </ion-slide>
+        <ion-slide>
+            <ion-toolbar>
+                <ion-buttons end>
+                    <button ion-button color="primary" (click)="skip()">Skip</button>
+                </ion-buttons>
+            </ion-toolbar>
+            <img src="assets/imgs/logo.png" class="slide-image"/>
+            <h2 class="slide-title">Preparation</h2>
+            <p>For the first time we need to calculate some ... in neutre Status to found your right stress data :</p>
+            <p><ion-icon name='ios-information-circle-outline' color='danger'></ion-icon> <span color='danger'> If you already did it just skip this part</span> </p>
+            <button ion-button clear icon-end color="primary" (click)="toinitialstress()">
+                continue
+                <ion-icon name="arrow-forward"></ion-icon>
+            </button>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

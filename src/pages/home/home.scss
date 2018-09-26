@@ -1,0 +1,78 @@
+
+
+
+.hrwicon{
+	weidht:30px;
+	height:30px;
+	float: right;
+	margin-left:300px;
+}
+
+
+.backgroundhome{
+	background: #EEF0F2;
+}
+
+.home-card{
+		background: color($colors, weiss);
+	    -webkit-border-radius:5px !important;
+		-webkit-box-shadow: none;
+	padding: 0;
+}
+
+.chart-pos{
+	margin-top:40px;
+}
+
+
+.button-puls{
+	margin-left:100px;
+	width: 40%;
+	background-color: #5c64f2;
+}
+
+.button-tipps{
+	margin-left:100px;
+	width: 40%;
+	background-color: #4CAF50;
+}
+.iconholder{
+	width:25%;
+	height:100%;
+	background: #1161f2;
+	margin: 0;
+	margin-left:0px;
+}
+
+.style-btn{
+width:100%;
+height:100%;
+background: linear-gradient(10deg,#5d65ea,#4EE7FC);
+}
+
+.styleTipps{
+	width:100%;
+height:100%;
+background: linear-gradient(10deg,#1ae05c,#35f2cf);
+}
+.home-card ion-card ion-card-header{
+ 	float: left;
+	width: 25%;
+	height: 92px;
+	padding: 30px;
+
+}
+.home-card ion-card-header ion-icon{
+	font-size: 50px;
+	color: white;
+}
+.home-card ion-card-content{
+	float:right;
+	width: 75%;
+	padding-top: 20px !important;
+}
+
+page-login {
+
+
+}
